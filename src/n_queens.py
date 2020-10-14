@@ -52,8 +52,3 @@ def n_queen_solver(n, row, board=None):
             n_queen_solver(n, row + 1, board)
         
         board[row][j] = 0
-
-
-n_queen_solver(8, 0)
-
-print(len(solutions))
