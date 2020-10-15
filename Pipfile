@@ -8,6 +8,9 @@ pylint = "*"
 
 [packages]
 pytest = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+pytest-mock = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,3 +1,5 @@
+from config import db_connection, solution_insert
+
 class NQueens:    
 
     def __init__(self, n):
@@ -44,7 +46,9 @@ class NQueens:
 
         if row == n:
             self.solutions.append(self.board)
-            return 
+            ins = solution_insert.values(size=self.board_size, board=self.board)
+            db_connection.execute(ins)
+            return
 
         for j in range(n):      
             if self.is_possible(n, row, j):
@@ -61,6 +65,3 @@ class NQueens:
             for _ in range(self.board_size)
         ] 
         return solutions
-
-obj = NQueens(8)
-obj.solver_helper()
