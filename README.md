@@ -4,9 +4,10 @@ This is an implementation for nQueens problem using backtracing.
 It is packet with docker-compose to set everything up.
 
 Docker-compose contains:
-    * Postgres DB
-    * Adminer
-    * 8queens
+    
+    - Postgres DB
+    - Adminer
+    - 8queens
 
 To build the containers use :
 `$ docker-compose -f docker-compose.yaml up`
