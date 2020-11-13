@@ -1,5 +1,5 @@
-CREATE TABLE solution (
+CREATE TABLE solutions (
     id      SERIAL PRIMARY KEY,
     size    INTEGER,
-    board   INTEGER[][]
+    board   INTEGER[]
 )

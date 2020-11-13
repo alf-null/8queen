@@ -1,4 +1,4 @@
-# 8queen
+#8queen
 
 This is an implementation for nQueens problem using backtracing.
 It is packet with docker-compose to set everything up.

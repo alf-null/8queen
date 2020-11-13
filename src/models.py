@@ -2,13 +2,16 @@
 Contains schema table/schema to represet the solution boards
 """
 
-from datetime import datetime
-from sqlalchemy import MetaData, Column, Integer, Table
+from sqlalchemy import Column, Integer
 from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy.ext.declarative import declarative_base
 
-meta = MetaData()
-solution_table = Table('solution', meta,
-    Column('id', Integer, primary_key=True),
-    Column('size', Integer),
-    Column('board', ARRAY(Integer, dimensions=2)),
-)
+
+Base = declarative_base()
+
+
+class Solution(Base):
+    __tablename__ = "solutions"
+    id = Column(Integer, primary_key=True)
+    size = Column(Integer)
+    board = Column(ARRAY(Integer, dimensions=1))
